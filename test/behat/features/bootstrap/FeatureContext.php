@@ -31,15 +31,15 @@ class FeatureContext extends MinkContext
         // Initialize your context here
     }
 
-//
-// Place your definition and hook methods here:
-//
-//    /**
-//     * @Given /^I have done something with "([^"]*)"$/
-//     */
-//    public function iHaveDoneSomethingWith($argument)
-//    {
-//        doSomethingWith($argument);
-//    }
-//
+    /**
+     * @Given /^au端末で接続する$/
+     */
+    public function iConnectWithAuTerminal()
+    {
+        $this->getSession()
+        ->getDriver()
+        ->getClient()
+        ->setServerParameters(['HTTP_USER_AGENT' => 'KDDI-CA39 UP.Browser/6.2.0.13.1.5 (GUI) MMP/2.0']);
+        $this->getSession()->setRequestHeader('x-up-subno', '10msimmsim000_vr.ezweb.ne.jp');
+    }
 }
