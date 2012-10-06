@@ -41,4 +41,13 @@ class FeatureContext extends MinkContext
         ->setServerParameters(['HTTP_USER_AGENT' => 'KDDI-CA39 UP.Browser/6.2.0.13.1.5 (GUI) MMP/2.0']);
         $this->getSession()->setRequestHeader('x-up-subno', '10msimmsim000_vr.ezweb.ne.jp');
     }
+
+    /**
+     * @Given /^データ投入テスト$/
+     */
+    public function v(TableNode $table)
+    {
+        print_r($table);
+    }
+
 }

@@ -1,5 +1,5 @@
 <?php
-return include '/Users/calpo/projects/php/behat_trial/with_composer/vendor/autoload.php';
+return include '/Users/calpo/projects/php/trial-behat/with_composer/vendor/autoload.php';
 
 /*
  * Local variables:
